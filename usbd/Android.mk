@@ -29,6 +29,8 @@ ifeq ($(TARGET_BOARD_PLATFORM),msm7k)
 LOCAL_CFLAGS += -DMSM_USB
 endif
 
-LOCAL_SHARED_LIBRARIES := libcutils libc
+LOCAL_SHARED_LIBRARIES := libutils libcutils libc
+LOCAL_LDLIBS := -llog \
+                -landroid
 
 include $(BUILD_EXECUTABLE)

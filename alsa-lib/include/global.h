@@ -133,17 +133,17 @@ int snd_shm_area_destroy(struct snd_shm_area *area);
 
 int snd_user_file(const char *file, char **result);
 
-#if !defined(_POSIX_C_SOURCE) && !defined(_POSIX_SOURCE)
-struct timeval {
-	time_t		tv_sec;		/* seconds */
-	long		tv_usec;	/* microseconds */
-};
+//#if !defined(_POSIX_C_SOURCE) && !defined(_POSIX_SOURCE)
+//struct timeval {
+//	time_t		tv_sec;		/* seconds */
+//	long		tv_usec;	/* microseconds */
+//};
 
-struct timespec {
-	time_t		tv_sec;		/* seconds */
-	long		tv_nsec;	/* nanoseconds */
-};
-#endif
+//struct timespec {
+//	time_t		tv_sec;		/* seconds */
+//	long		tv_nsec;	/* nanoseconds */
+//};
+//#endif
 
 /** Timestamp */
 typedef struct timeval snd_timestamp_t;

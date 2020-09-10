@@ -1,2 +1,3 @@
+type debuggerd;
 allow debuggerd system_data_file:sock_file write;
 allow debuggerd system_server:unix_stream_socket connectto;

@@ -204,7 +204,7 @@
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!--<bool name="config_intrusiveBatteryLed">true</bool>-->
 
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
          specified
@@ -217,7 +217,7 @@
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
-    <bool translatable="false" name="skip_restoring_network_selection">true</bool>
+    <!--<bool translatable="false" name="skip_restoring_network_selection">true</bool>-->
 
     <!-- If true, the direction rotation is applied to get to an application's requested
          orientation is reversed.  Normally, the model is that landscape is
@@ -225,7 +225,7 @@
          landscape will cause a clockwise rotation, and on a landscape device an
          app requesting portrait will cause a counter-clockwise rotation.  Setting
          true here reverses that logic. -->
-    <bool name="config_reverseDefaultRotation">false</bool>
+    <!--<bool name="config_reverseDefaultRotation">false</bool>-->
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
@@ -249,9 +249,8 @@
     -->
 
     <!-- Use analog dock-connector if device is connected (auto-sensing) -->
-    <bool name="config_forceAnalogDeskDock">true</bool>
-    <bool name="config_forceAnalogCarDock">true</bool>
-
+    <!--<bool name="config_forceAnalogDeskDock">true</bool>-->
+    <!--<bool name="config_forceAnalogCarDock">true</bool>-->
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
@@ -274,7 +273,7 @@
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
-    <bool translatable="false" name="skip_restoring_network_selection">false</bool>
+    <!--<bool translatable="false" name="skip_restoring_network_selection">false</bool>-->
 
     <!-- Support for disabling to fetch APN from OMH card
          for some cdma carriers -->

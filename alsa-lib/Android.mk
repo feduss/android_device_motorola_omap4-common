@@ -73,7 +73,7 @@ LOCAL_SRC_FILES := $(filter-out src/shmarea.c, $(LOCAL_SRC_FILES))
 
 LOCAL_SHARED_LIBRARIES := \
     libdl \
-    libmedia
+    libaudioclient
 
 LOCAL_SRC_FILES += ../audio/motoaudiocompat.c
 

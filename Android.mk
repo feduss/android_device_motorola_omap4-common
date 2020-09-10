@@ -11,11 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+LOCAL_PATH := $(call my-dir)
+$(warning path omap4-common -> $(LOCAL_PATH))
 
+include $(CLEAR_VARS)
+$(warning board_vendor --> $(BOARD_VENDOR))
 ifeq ($(BOARD_VENDOR),motorola-omap4)
 
-LOCAL_PATH := $(call my-dir)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call all-makefiles-under, $(LOCAL_PATH))
 
 endif

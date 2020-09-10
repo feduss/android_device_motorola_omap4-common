@@ -48,7 +48,7 @@ include device/qcom/sepolicy/sepolicy.mk
 # Kernel/Module Build
 TARGET_KERNEL_SOURCE := kernel/motorola/omap4-common
 TARGET_KERNEL_CONFIG := mapphone_mmi_defconfig
-COMMON_KERNEL_CMDLINE := androidboot.hardware=mapphone_cdma androidboot.selinux=enforcing
+COMMON_KERNEL_CMDLINE := androidboot.hardware=mapphone_cdma androidboot.selinux=permissive
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
@@ -173,11 +173,11 @@ BOARD_RIL_NO_CELLINFOLIST := true
 BOARD_RIL_CLASS := ../../../device/motorola/omap4-common/ril
 TARGET_IGNORE_RO_BOOT_SERIALNO := true
 
-BOARD_HARDWARE_CLASS := $(OMAP4_NEXT_FOLDER)/cmhw/
+BOARD_HARDWARE_CLASS := hardware/lineage/lineagehw
 
 # Override healthd HAL to use charge_counter for 1%
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.omap4
-WITH_CM_CHARGER := false
+#BOARD_HAL_STATIC_LIBRARIES := libhealthd.omap4
+#WITH_CM_CHARGER := false
 
 BOARD_SEPOLICY_DIRS += \
     device/motorola/omap4-common/sepolicy

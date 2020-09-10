@@ -8,12 +8,16 @@ LOCAL_MODULE := motorild
 LOCAL_MODULE_TAGS := optional
 ifneq ($(wildcard external/libnl),)
 LOCAL_C_INCLUDES += external/libnl/include
-LOCAL_SHARED_LIBRARIES := libnl
+LOCAL_SHARED_LIBRARIES := libnl libutils libcutils
+LOCAL_LDLIBS := -llog \
+                -landroid
 else
 LOCAL_C_INCLUDES += external/libnl-headers
 LOCAL_STATIC_LIBRARIES := libnl_2
 endif
-LOCAL_SHARED_LIBRARIES += libcutils
+LOCAL_SHARED_LIBRARIES += libcutils libutils
+LOCAL_LDLIBS := -llog \
+                -landroid
 
 
 include $(BUILD_EXECUTABLE)
@@ -24,6 +28,8 @@ LOCAL_SRC_FILES := motorilc.c
 LOCAL_MODULE_PATH := $(TARGET_OUT)/bin/
 LOCAL_MODULE := motorilc
 LOCAL_MODULE_TAGS := optional
-LOCAL_SHARED_LIBRARIES += libcutils
+LOCAL_SHARED_LIBRARIES += libcutils libutils
+LOCAL_LDLIBS := -llog \
+                -landroid
 
 include $(BUILD_EXECUTABLE)
