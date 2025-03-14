@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.linegaeos.settings.device;
 
-import org.cyanogenmod.internal.util.ScreenType;
+import org.lineageos.internal.util.ScreenType;
 
 import android.app.ActionBar;
 import android.os.Bundle;
