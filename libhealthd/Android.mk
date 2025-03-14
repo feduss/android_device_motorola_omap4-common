@@ -19,5 +19,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := healthd_board_omap4.cpp
 LOCAL_MODULE := libhealthd.omap4
 LOCAL_C_INCLUDES := system/core/healthd/include/healthd
+LOCAL_STATIC_LIBRARIES := libbase
+LOCAL_WHOLE_STATIC_LIBRARIES := libcutils
 include $(BUILD_STATIC_LIBRARY)
 
