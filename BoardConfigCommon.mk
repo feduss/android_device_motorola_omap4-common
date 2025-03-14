@@ -32,8 +32,8 @@ TARGET_BOARD_OMAP_CPU := 4430
 # Camera
 USE_CAMERA_STUB := false
 TI_CAMERAHAL_USES_LEGACY_DOMX_DCC := true
-#TI_CAMERAHAL_DEBUG_ENABLED := true
-#TI_CAMERAHAL_VERBOSE_DEBUG_ENABLED := true
+TI_CAMERAHAL_DEBUG_ENABLED := true
+TI_CAMERAHAL_VERBOSE_DEBUG_ENABLED := true
 
 # Custom includes for kernel and frameworks
 PRODUCT_VENDOR_KERNEL_HEADERS := $(COMMON_FOLDER)/kernel-headers
@@ -48,7 +48,7 @@ include device/qcom/sepolicy/sepolicy.mk
 # Kernel/Module Build
 TARGET_KERNEL_SOURCE := kernel/motorola/omap4-common
 TARGET_KERNEL_CONFIG := mapphone_mmi_defconfig
-COMMON_KERNEL_CMDLINE := androidboot.hardware=mapphone_cdma androidboot.selinux=enforcing
+COMMON_KERNEL_CMDLINE := androidboot.hardware=mapphone_cdma androidboot.selinux=permissive
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
@@ -116,8 +116,8 @@ BOARD_VENDOR_TI_GPS_HARDWARE := omap4
 BOARD_GPS_LIBRARIES := libgps
 
 # adb runs as user
-ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=1
-ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
+#ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=1
+#ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 
 # Recovery
 BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
@@ -173,7 +173,7 @@ BOARD_RIL_NO_CELLINFOLIST := true
 BOARD_RIL_CLASS := ../../../device/motorola/omap4-common/ril
 TARGET_IGNORE_RO_BOOT_SERIALNO := true
 
-BOARD_HARDWARE_CLASS := $(OMAP4_NEXT_FOLDER)/cmhw/
+#BOARD_HARDWARE_CLASS := $(OMAP4_NEXT_FOLDER)/cmhw/
 
 # Override healthd HAL to use charge_counter for 1%
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.omap4
@@ -181,3 +181,6 @@ WITH_CM_CHARGER := false
 
 BOARD_SEPOLICY_DIRS += \
     device/motorola/omap4-common/sepolicy
+
+# Kernel
+BOARD_KERNEL_IMAGE_NAME:=zImage
