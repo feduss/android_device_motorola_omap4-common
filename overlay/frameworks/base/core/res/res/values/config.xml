@@ -38,14 +38,6 @@
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
 
-    <!-- If true, the direction rotation is applied to get to an application's requested
-         orientation is reversed.  Normally, the model is that landscape is
-         clockwise from portrait; thus on a portrait device an app requesting
-         landscape will cause a clockwise rotation, and on a landscape device an
-         app requesting portrait will cause a counter-clockwise rotation.  Setting
-         true here reverses that logic. -->
-    <bool name="config_reverseDefaultRotation">false</bool>
-
     <integer name="config_deskDockKeepsScreenOn">1</integer>
     <integer name="config_carDockKeepsScreenOn">1</integer>
 
@@ -214,10 +206,6 @@
     <integer-array name="config_virtualKeyVibePattern">
         <item>10</item>
     </integer-array>
-
-    <!-- Boolean indicating if restoring network selection should be skipped -->
-    <!-- The restoring is handled by modem if it is true -->
-    <bool translatable="false" name="skip_restoring_network_selection">true</bool>
 
     <!-- If true, the direction rotation is applied to get to an application's requested
          orientation is reversed.  Normally, the model is that landscape is
